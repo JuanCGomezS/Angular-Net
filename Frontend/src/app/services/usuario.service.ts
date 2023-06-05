@@ -13,6 +13,7 @@ export class UsuarioService {
   constructor(
     private http: HttpClient
   ) {
+    this.myAppUrl = `https://localhost:7148/`;
   }
 
   getListUsuarios(): Observable<any> {

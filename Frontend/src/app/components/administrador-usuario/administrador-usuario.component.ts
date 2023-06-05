@@ -52,7 +52,7 @@ export class AdministradorUsuarioComponent implements OnInit {
     }
 
     if (this.id) {
-      usuario.id_u = this.id;
+      usuario.id = this.id;
       this._usuarioService.updateUser(this.id, usuario).subscribe(data => {
         if (this.debug) console.log(data);
         
@@ -92,7 +92,7 @@ export class AdministradorUsuarioComponent implements OnInit {
 
   editarUsuario(usuario: any) {
     this.accion = 'Editar';
-    this.id = usuario.id_u;
+    this.id = usuario.id;
     if (this.debug) console.log(this.id);
 
     this.form.patchValue({
